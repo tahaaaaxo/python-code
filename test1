@@ -1,0 +1,20 @@
+n = int(input())
+student_dict = {}
+avg = 0
+
+for students in range(n):
+    name, *score = input().split()
+    marks = list(map(float, score))
+    key_name = name
+    student_dict.update({name: marks})
+
+
+# print(f"scores are {marks} and names are {name}")
+# print(student_dict)
+
+query_name = str(input())
+# print(student_dict.get(query_name))
+for marks in student_dict.get(query_name):
+    avg += marks
+avg = avg
+print("average marks are : ", "%.2f" % avg)
